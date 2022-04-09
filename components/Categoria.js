@@ -5,7 +5,7 @@ const Categoria = ({ categoria }) => {
     const { name, icon, id } = categoria
     const { categoryActual, handleClickCategory } = useApp();
     return (
-        <div className={`${categoryActual?.id === id ? 'bg-blue-400' : ''} flex items-center gap-4 w-full border hover:bg-blue-400`}>
+        <div  onClick={() => handleClickCategory(id)} className={`${categoryActual?.id === id ? 'bg-blue-400' : ''} flex items-center gap-4 w-full border hover:bg-blue-400 hover:cursor-pointer`}>
             <Image
                 width={100}
                 height={100}
@@ -13,7 +13,7 @@ const Categoria = ({ categoria }) => {
                 alt={name}
                 className='mr-5'
             />
-            <button onClick={() => handleClickCategory(id)} type='button' className='text-white text-2l font-bold hover:cursor-pointer'>{name}</button>
+            <button type='button' className='text-white text-2l font-bold hover:cursor-pointer'>{name}</button>
         </div>
 
     )
