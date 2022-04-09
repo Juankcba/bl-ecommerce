@@ -15,7 +15,7 @@ const Producto = ({ product }) => {
                 <button onClick={() => {
                     handleClickProducto(product)
                     handleChangeModal()
-                }} type='button' className='bg-indigo-600 hover:bg-indigo-800 text-white w-full mt-5 p-3 uppercase'>Agregar</button>
+                 }} type='button' className='bg-indigo-600 hover:bg-indigo-800 text-white w-full mt-5 p-3 uppercase'>Agregar</button>
             </div>
         </div>
     )
